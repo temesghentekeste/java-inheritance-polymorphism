@@ -16,7 +16,7 @@ public class Customer extends Person {
      */
     private int customerId;
     private double balance;
-    public Customer(String name, int age, String username, String passowrd, int customerId) {
+    public Customer(String name, int age, String username, String passowrd) {
         super(name,age, username, passowrd);
         this.customerId = generateCustomerId();
     }
