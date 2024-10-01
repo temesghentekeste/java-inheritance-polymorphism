@@ -1,4 +1,4 @@
-package org.example;
+package org.develhope.java_advanced;
 
 import java.util.Objects;
 
