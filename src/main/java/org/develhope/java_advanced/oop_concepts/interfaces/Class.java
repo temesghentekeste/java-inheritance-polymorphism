@@ -12,3 +12,23 @@ public interface Class {
     void takeAttendance(String studentName);
     List<String> getAttendanceList();
 }
+
+class Math implements Class {
+    private List<String> attendanceList;
+
+    public Math() {
+        attendanceList = new ArrayList<>();
+    }
+
+    @Override
+    public void takeAttendance(String studentName) {
+        attendanceList.add(studentName);
+    }
+
+    @Override
+    public List<String> getAttendanceList() {
+        return attendanceList;
+    }
+}
+
+
