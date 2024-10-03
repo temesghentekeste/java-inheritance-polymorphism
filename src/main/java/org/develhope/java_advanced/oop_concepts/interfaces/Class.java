@@ -31,4 +31,24 @@ class Math implements Class {
     }
 }
 
+class Italian implements Class {
+    private List<String> attendanceList;
+
+    public Italian() {
+        attendanceList = new ArrayList<>();
+    }
+
+    @Override
+    public void takeAttendance(String studentName) {
+        attendanceList.add(studentName);
+    }
+
+    @Override
+    public List<String> getAttendanceList() {
+        return attendanceList;
+    }
+}
+
+
+
 
