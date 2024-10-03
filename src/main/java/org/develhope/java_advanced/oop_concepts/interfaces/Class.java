@@ -1,74 +1,62 @@
 package org.develhope.java_advanced.oop_concepts.interfaces;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public interface Class {
 /*
     1- Create "Class" interface which will have takeAttendance and getAttendanceList functions.
     implement that interface from 2 class which called "Math" and "Italian". write test cases.
  */
 
-    void takeAttendance(String studentName);
+import java.util.ArrayList;
+import java.util.List;
+
+public interface Class {
+    void takeAttendance(String name);
     List<String> getAttendanceList();
 }
 
 class Math implements Class {
-    private List<String> attendanceList;
+    List<String> attendanceList;
 
     public Math() {
         attendanceList = new ArrayList<>();
     }
 
-    @Override
-    public void takeAttendance(String studentName) {
-        attendanceList.add(studentName);
+    public void takeAttendance(String name) {
+        attendanceList.add(name);
     }
 
-    @Override
     public List<String> getAttendanceList() {
         return attendanceList;
     }
 }
 
 class Italian implements Class {
-    private List<String> attendanceList;
+    List<String> attendanceList;
 
     public Italian() {
         attendanceList = new ArrayList<>();
     }
 
-    @Override
-    public void takeAttendance(String studentName) {
-        attendanceList.add(studentName);
+    public void takeAttendance(String name) {
+        attendanceList.add(name);
     }
 
-    @Override
     public List<String> getAttendanceList() {
         return attendanceList;
     }
 }
 
-class ClassTest {
+class ClassRunner {
     public static void main(String[] args) {
-        // Testing Math class
         Class mathClass = new Math();
-        mathClass.takeAttendance("John Doe");
-        mathClass.takeAttendance("Jane Smith");
-
-        List<String> mathAttendance = mathClass.getAttendanceList();
-        System.out.println("Math Attendance List: " + mathAttendance); // Expected: [John Doe, Jane Smith]
-
-        // Testing Italian class
         Class italianClass = new Italian();
-        italianClass.takeAttendance("Mario Rossi");
-        italianClass.takeAttendance("Luigi Bianchi");
 
-        List<String> italianAttendance = italianClass.getAttendanceList();
-        System.out.println("Italian Attendance List: " + italianAttendance); // Expected: [Mario Rossi, Luigi Bianchi]
+        mathClass.takeAttendance("wafi");
+        mathClass.takeAttendance("jermie");
+
+        italianClass.takeAttendance("melisa");
+        italianClass.takeAttendance("gulead");
+
+        System.out.println(mathClass.getAttendanceList());
+        System.out.println(italianClass.getAttendanceList());
     }
 }
-
-
-
-
