@@ -49,6 +49,26 @@ class Italian implements Class {
     }
 }
 
+class ClassTest {
+    public static void main(String[] args) {
+        // Testing Math class
+        Class mathClass = new Math();
+        mathClass.takeAttendance("John Doe");
+        mathClass.takeAttendance("Jane Smith");
+
+        List<String> mathAttendance = mathClass.getAttendanceList();
+        System.out.println("Math Attendance List: " + mathAttendance); // Expected: [John Doe, Jane Smith]
+
+        // Testing Italian class
+        Class italianClass = new Italian();
+        italianClass.takeAttendance("Mario Rossi");
+        italianClass.takeAttendance("Luigi Bianchi");
+
+        List<String> italianAttendance = italianClass.getAttendanceList();
+        System.out.println("Italian Attendance List: " + italianAttendance); // Expected: [Mario Rossi, Luigi Bianchi]
+    }
+}
+
 
 
 
