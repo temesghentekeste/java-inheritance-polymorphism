@@ -23,4 +23,5 @@ abstract class Person {
 
     // Abstract method to be implemented by subclasses
     public abstract void work();
+    public abstract void printNameAndType();
 }

@@ -11,4 +11,10 @@ class Woman extends Person {
     public void work() {
         System.out.println(name + " is a woman and might not have a specific job.");
     }
+
+    @Override
+    public void printNameAndType() {
+        System.out.println("Name: " + name);
+        System.out.println("Type: " + this.getClass().getSimpleName());
+    }
 }
