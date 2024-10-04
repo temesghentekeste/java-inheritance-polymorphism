@@ -14,11 +14,16 @@ public class PersonRunner {
         Person workerWoman1 = new WorkerWoman("melisa II", 20, "Developer", 42);
         Person workerWoman2 = new WorkerWoman("Hana", 25, "Nurse", 41);
 
-        ArrayList<Person> people = new ArrayList<>(java.util.List.of(man1, workerMan1, workerMan2, woman1, workerWoman1, workerWoman2));
+        ArrayList<Person> people = new ArrayList<>(List.of(man1, workerMan1, workerMan2, woman1, workerWoman1, workerWoman2));
 
         for (Person person : people) {
             person.printNameAndType();
             person.work();
+
+
+            if( person.getClass().getSimpleName().equals("WorkerMan")) {
+                ((WorkerMan)person).getProfile();
+            }
 
         }
     }
