@@ -5,12 +5,12 @@ public class Main {
         // Creating different people (instances of Man, WorkerMan, Woman, WorkerWoman)
 
         Man man1 = new Man("John", 30);
-        WorkerMan workerMan1 = new WorkerMan("Mike", 45);
-        WorkerMan workerMan2 = new WorkerMan("Bob", 28);
+        WorkerMan workerMan1 = new WorkerMan("Mike", 45, "Software engineer");
+        WorkerMan workerMan2 = new WorkerMan("Bob", 28, "Nurse");
 
         Woman woman1 = new Woman("Alice", 25);
-        WorkerWoman workerWoman1 = new WorkerWoman("Eve", 33);
-        WorkerWoman workerWoman2 = new WorkerWoman("Sophia", 40);
+        WorkerWoman workerWoman1 = new WorkerWoman("Eve", 33, "Nurse");
+        WorkerWoman workerWoman2 = new WorkerWoman("Sophia", 40, "Web Developer");
 
         // Storing all persons in an array
         Person[] people = {man1, workerMan1, workerMan2, woman1, workerWoman1, workerWoman2};
