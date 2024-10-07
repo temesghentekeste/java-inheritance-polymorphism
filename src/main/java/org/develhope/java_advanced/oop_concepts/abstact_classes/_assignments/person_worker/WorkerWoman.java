@@ -1,9 +1,9 @@
-package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments;
+package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.person_worker;
 
-class WorkerMan extends Man {
+class WorkerWoman extends Woman {
     private String jobTitle;
     private int workingHours;
-    public WorkerMan(String name, int age, String jobTitle, int workingHours) {
+    public WorkerWoman(String name, int age, String jobTitle, int workingHours) {
         super(name, age);
         this.jobTitle = jobTitle;
         this.workingHours = workingHours;
@@ -28,7 +28,6 @@ class WorkerMan extends Man {
     // Override the work method
     @Override
     public void work() {
-        System.out.println(name + " is a WorkerMan and is " + getJobTitle() + " and worked " + getWorkingHours());
+        System.out.println(name + " is a WorkerWoman and is " + getJobTitle() + " and worked " + getWorkingHours());
     }
-
 }

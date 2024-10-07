@@ -1,4 +1,4 @@
-package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments;
+package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.person_worker;
 
 public class Main {
     public static void main(String[] args) {
