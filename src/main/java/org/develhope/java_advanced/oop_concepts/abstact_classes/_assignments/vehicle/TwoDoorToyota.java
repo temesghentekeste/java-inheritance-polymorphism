@@ -1,21 +1,19 @@
 package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.vehicle;
 
-public class FourDoorToyota extends FourDoorCar {
+public class TwoDoorToyota extends TwoDoorCar {
 
-    public FourDoorToyota(String model, int year) {
+    public TwoDoorToyota(String model, int year) {
         super("Toyota", model, year);
     }
 
     @Override
     public void startEngine() {
         System.out.println("Toyota engine started.");
-        run();
     }
 
     @Override
     public void stopEngine() {
         System.out.println("Toyota engine stopped.");
-        stop();
     }
 
     @Override
@@ -30,7 +28,7 @@ public class FourDoorToyota extends FourDoorCar {
 
     @Override
     public void stop() {
-        System.out.println("Toyota is stopped");
+        System.out.println("Toyota is stopping");
     }
 
     @Override
