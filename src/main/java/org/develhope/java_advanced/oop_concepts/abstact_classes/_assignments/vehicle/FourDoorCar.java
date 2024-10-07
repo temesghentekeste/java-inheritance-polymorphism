@@ -5,16 +5,18 @@ public abstract class FourDoorCar implements Car {
     private String make;
     private String model;
     private int year;
+    private int numberOfDoors;
 
     public FourDoorCar(String make, String model, int year) {
         this.make = make;
         this.model = model;
         this.year = year;
+        this.numberOfDoors = 4;
     }
 
     @Override
     public String getCarInfo() {
-        return year + " " + make + " " + model + " - Four Door Car";
+        return year + " " + make + " " + model + " - " + numberOfDoors + " Door Car";
     }
 
     public abstract void startEngine();
