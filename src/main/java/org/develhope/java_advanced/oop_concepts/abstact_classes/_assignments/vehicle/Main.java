@@ -4,6 +4,13 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        interfacesAndAbstractClasses();
+        System.out.println();
+        System.out.println("Polymorphism: ");
+        polymorphismApproach();
+    }
+
+    private static void interfacesAndAbstractClasses() {
         // Creating a FourDoorToyota object
         Car camry = new FourDoorToyota("Camry", 2024,  30000, 160);
         System.out.println(camry.getCarInfo());
@@ -81,9 +88,7 @@ public class Main {
         veloster.repair();
         System.out.println("Selling Price: $" + veloster.sell());
 
-        System.out.println();
-        System.out.println("Polymorphism: ");
-        polymorphismApproach();
+
     }
 
     public static void polymorphismApproach() {

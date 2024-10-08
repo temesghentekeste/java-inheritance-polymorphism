@@ -2,6 +2,7 @@ package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.ve
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Dealer {
     private String dealerName;
@@ -49,5 +50,17 @@ public class Dealer {
     // Show the current balance of the dealer
     public void showBalance() {
         System.out.println("Dealer's current balance: $" + money);
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    public void intialize(List<Car> cars) {
+        setCars(cars);
     }
 }

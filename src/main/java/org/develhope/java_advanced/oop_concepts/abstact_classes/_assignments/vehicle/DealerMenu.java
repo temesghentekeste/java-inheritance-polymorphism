@@ -3,6 +3,7 @@ package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.ve
 import java.util.Scanner;
 
 public class DealerMenu {
+    static Scanner scanner = new Scanner(System.in);
     private Dealer dealer;
 
     public DealerMenu(Dealer dealer) {
@@ -11,7 +12,7 @@ public class DealerMenu {
 
     // Dealer menu to manage operations
     public void run() {
-        Scanner scanner = new Scanner(System.in);
+
         boolean exit = false;
 
         while (!exit) {
@@ -32,7 +33,7 @@ public class DealerMenu {
                     break;
                 case 2:
                     // Example of adding a car manually, in a real system you'd ask the user for input
-                    dealer.addCar(new FourDoorToyota("Camry", 2020, 30000, 160));  // Example car
+                    addCarInteractively();  // Call a method to get input for a new car  // Example car
                     break;
                 case 3:
                     dealer.showAllCars();
@@ -55,5 +56,81 @@ public class DealerMenu {
         }
 
         scanner.close();
+    }
+
+    // Method to interactively add a car based on user input
+    private void addCarInteractively() {
+        System.out.print("Enter car type (1. FourDoor / 2. TwoDoor): ");
+        String carType = scanner.nextLine();
+        carType = carType.equals("1") ? "FourDoor" : "TwoDoor";
+
+        System.out.print("Enter car brand (Toyota, BMW, Ford, Hyundai): ");
+        String brand = scanner.nextLine();
+
+        System.out.print("Enter car model: ");
+        String model = scanner.nextLine();
+
+        System.out.print("Enter car year: ");
+        int year = scanner.nextInt();
+
+        System.out.print("Enter car mileage: ");
+        int mileage = scanner.nextInt();
+
+        System.out.print("Enter car power (in horsepower): ");
+        int power = scanner.nextInt();
+        scanner.nextLine();  // Consume the newline character
+
+        Car newCar = null;
+
+        // Create the appropriate car object based on the user's input
+        switch (carType.toLowerCase()) {
+            case "fourdoor":
+                newCar = createFourDoorCar(brand, model, year, mileage, power);
+                break;
+            case "twodoor":
+                newCar = createTwoDoorCar(brand, model, year, mileage, power);
+                break;
+            default:
+                System.out.println("Invalid car type entered.");
+                return;
+        }
+
+        if (newCar != null) {
+            dealer.addCar(newCar);
+        }
+    }
+
+    // Create a FourDoor car based on user input
+    private Car createFourDoorCar(String brand, String model, int year, int mileage, int power) {
+        switch (brand.toLowerCase()) {
+            case "toyota":
+                return new FourDoorToyota(model, year, mileage, power);
+            case "bmw":
+                return new FourDoorBMW(model, year, mileage, power);
+            case "ford":
+                return new FourDoorFord(model, year, mileage, power);
+            case "hyundai":
+                return new FourDoorHyundai(model, year, mileage, power);
+            default:
+                System.out.println("Invalid brand for FourDoor car.");
+                return null;
+        }
+    }
+
+    // Create a TwoDoor car based on user input
+    private Car createTwoDoorCar(String brand, String model, int year, int mileage, int power) {
+        switch (brand.toLowerCase()) {
+            case "toyota":
+                return new TwoDoorToyota(model, year, mileage, power);
+            case "bmw":
+                return new TwoDoorBMW(model, year, mileage, power);
+            case "ford":
+                return new TwoDoorFord(model, year, mileage, power);
+            case "hyundai":
+                return new TwoDoorHyundai(model, year, mileage, power);
+            default:
+                System.out.println("Invalid brand for TwoDoor car.");
+                return null;
+        }
     }
 }
