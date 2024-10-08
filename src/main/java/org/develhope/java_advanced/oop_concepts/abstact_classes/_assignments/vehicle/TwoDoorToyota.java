@@ -36,6 +36,11 @@ public class TwoDoorToyota extends TwoDoorCar {
         System.out.println("Toyota is being repaired");
 
     }
+
+    @Override
+    public String toString() {
+        return "TwoDoorToyota --> " + super.toString();
+    }
 }
 
 

@@ -19,6 +19,11 @@ Car <Interface>
 1- Add Sell Function that returns double into Car interface and implement it
 from the inner classes(calculate price by year mileage and power)
  */
+
+/*
+2- implement toString function
+on the all classes(not interface and abstract classes)
+ */
 public interface Car {
     void run();      // Method to start the car
     void stop();     // Method to stop the car

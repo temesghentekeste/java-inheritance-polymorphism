@@ -39,6 +39,18 @@ public abstract class FourDoorCar implements Car {
         return Math.max(finalPrice, 0);
     }
 
+    @Override
+    public String toString() {
+        return "FourDoorCar{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", numberOfDoors=" + numberOfDoors +
+                ", mileage=" + mileage +
+                ", power=" + power +
+                '}';
+    }
+
     public abstract void startEngine();
 
     public abstract void stopEngine();

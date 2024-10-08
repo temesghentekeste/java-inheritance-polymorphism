@@ -38,6 +38,18 @@ public abstract class TwoDoorCar implements Car {
         return Math.max(finalPrice, 0);
     }
 
+    @Override
+    public String toString() {
+        return "TwoDoorCar{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", numberOfDoors=" + numberOfDoors +
+                ", mileage=" + mileage +
+                ", power=" + power +
+                '}';
+    }
+
     public abstract void startEngine();
 
     public abstract void stopEngine();

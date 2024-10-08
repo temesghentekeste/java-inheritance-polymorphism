@@ -111,5 +111,12 @@ public class Main {
             System.out.println();  // Space between car outputs
             System.out.println("Selling Price: $" + car.sell());
         }
+
+        System.out.println();
+        System.out.println("Demonstrating toString() overriden method: ");
+        for (Car car : cars) {
+            System.out.println(car);
+            System.out.println("Selling Price: $" + car.sell());
+        }
     }
 }

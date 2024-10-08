@@ -39,7 +39,10 @@ public class FourDoorFord extends FourDoorCar {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "FourDoorFord --> " + super.toString();
+    }
 }
 
 
