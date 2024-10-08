@@ -24,6 +24,18 @@ from the inner classes(calculate price by year mileage and power)
 2- implement toString function
 on the all classes(not interface and abstract classes)
  */
+
+/*
+3- Create Dealer Class
+
+In the dealer store money, Cars and information about dealer.
+
+IT should have show all cars, sell car and add car functions.
+
+To manage everything we need to have a menu
+so we need to have dealerMenu() function so that we will just run it and we
+will control other functions by scanners.
+ */
 public interface Car {
     void run();      // Method to start the car
     void stop();     // Method to stop the car
