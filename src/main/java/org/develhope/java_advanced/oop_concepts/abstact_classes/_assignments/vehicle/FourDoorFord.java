@@ -2,8 +2,8 @@ package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.ve
 
 public class FourDoorFord extends FourDoorCar {
 
-    public FourDoorFord(String model, int year) {
-        super("Ford", model, year);
+    public FourDoorFord(String model, int year, double mileage, int power) {
+        super("Ford", model, year, mileage, power);
     }
 
     @Override
@@ -38,6 +38,8 @@ public class FourDoorFord extends FourDoorCar {
         System.out.println("Ford is being repaired");
 
     }
+
+
 }
 
 

@@ -2,8 +2,8 @@ package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.ve
 
 public class TwoDoorHyundai extends TwoDoorCar {
 
-    public TwoDoorHyundai(String model, int year) {
-        super("Hyundai", model, year);
+    public TwoDoorHyundai(String model, int year, double mileage, int power) {
+        super("Ford", model, year, mileage, power);
     }
 
     @Override
