@@ -1,4 +1,4 @@
-package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.vehicle;
+package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.dealers;
 
 import java.util.ArrayList;
 import java.util.List;

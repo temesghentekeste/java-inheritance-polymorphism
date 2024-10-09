@@ -30,6 +30,7 @@ public class SumOfMultiples {
     public static void main(String[] args) {
         System.out.println(sumOfMultiplesBeforeJava8(7));
         System.out.println(sumOfMultiples(7));
+        System.out.println(sumOfMultiplesStreams(7));
     }
 
     private static int sumOfMultiplesBeforeJava8(int number) {
@@ -49,5 +50,13 @@ public class SumOfMultiples {
                 .collect(Collectors.toList()); // Collects the stream into a lis
         return numbers.stream().filter(num -> num % 3 == 0 || num % 5 == 0 || num % 7 == 0)
                 .reduce(0, Integer::sum);
+    }
+
+    private static int sumOfMultiplesStreams(int number) {
+      List<Integer> numbers = IntStream.rangeClosed(1, number)
+              .boxed()
+              .toList();
+
+      return numbers.stream().filter(num -> num % 3 == 0 || num % 5 == 0 || num % 7 ==0).reduce(0, Integer::sum);
     }
 }

@@ -1,4 +1,4 @@
-package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.vehicle;
+package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.dealers;
 /*
 Today's Goal:
 

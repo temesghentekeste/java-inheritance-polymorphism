@@ -1,8 +1,7 @@
-package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.vehicle;
+package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.dealers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Dealer {
     private String dealerName;
