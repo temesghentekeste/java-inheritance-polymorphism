@@ -14,6 +14,12 @@ public class Dealer {
         this.cars = new ArrayList<>();
     }
 
+    public Dealer(String dealerName, double money, List<Car> cars) {
+        this.dealerName = dealerName;
+        this.money = money;
+        this.cars = cars != null ? cars : new ArrayList<>();  // Initialize with empty list if null
+    }
+
     // Show all cars available in the inventory
     public void showAllCars() {
         if (cars.isEmpty()) {
@@ -61,5 +67,21 @@ public class Dealer {
 
     public void intialize(List<Car> cars) {
         setCars(cars);
+    }
+
+    public String getDealerName() {
+        return dealerName;
+    }
+
+    public void setDealerName(String dealerName) {
+        this.dealerName = dealerName;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
     }
 }
