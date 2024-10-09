@@ -1,4 +1,4 @@
-package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.dealers;
+package org.develhope.java_advanced.oop_concepts.abstact_classes._assignments.dealers.peercodediscussion;
 
 import java.util.Scanner;
 
