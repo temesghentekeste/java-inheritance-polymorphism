@@ -6,7 +6,7 @@ import java.util.List;
 public class DealerRunner {
     public static void main(String[] args) {
         // Create a dealer
-        Dealer dealer = new Dealer("John's Car Dealership", 50000);  // Dealer with $50,000 starting balance
+        Dealer dealer = new Dealer("Temesghen's Car Dealership", 50000);  // Dealer with $50,000 starting balance
         dealer.intialize(getCars());
         // Create the dealer menu
         DealerMenu menu = new DealerMenu(dealer);
